@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/nombreGrupo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nombreGrupo"
+        app:layout_constraintBottom_toTopOf="@+id/imgLetra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloCancion" />
+
+    <TextView
+        android:id="@+id/tituloCancion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tituloCancion"
+        app:layout_constraintBottom_toTopOf="@+id/nombreGrupo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgMusica" />
+
+    <ImageView
+        android:id="@+id/imgMusica"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/tituloCancion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <SeekBar
+        android:id="@+id/barraProgresion"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLetra" />
+
+    <SeekBar
+        android:id="@+id/barraMusica"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPlay" />
+
+    <ImageView
+        android:id="@+id/imgSiguienteCancion"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/barraMusica"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgPlay"
+        app:layout_constraintTop_toBottomOf="@+id/barraProgresion"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/forward_11012588" />
+
+    <ImageView
+        android:id="@+id/imgPlay"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/barraMusica"
+        app:layout_constraintEnd_toStartOf="@+id/imgSiguienteCancion"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgCancionAnterior"
+        app:layout_constraintTop_toBottomOf="@+id/barraProgresion"
+        app:srcCompat="@drawable/play_11012630" />
+
+    <ImageView
+        android:id="@+id/imgCancionAnterior"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/barraMusica"
+        app:layout_constraintEnd_toStartOf="@+id/imgPlay"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barraProgresion"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/forward_11012588___copia" />
+
+    <ImageView
+        android:id="@+id/imgCompartir"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toStartOf="@+id/imgLetra"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/redo_16351426"
+        tools:layout_editor_absoluteY="395dp" />
+
+    <ImageView
+        android:id="@+id/imgLetra"
+        android:layout_width="61dp"
+        android:layout_height="61dp"
+        app:layout_constraintBottom_toTopOf="@+id/barraProgresion"
+        app:layout_constraintEnd_toStartOf="@+id/imgCanciones"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgCompartir"
+        app:layout_constraintTop_toBottomOf="@+id/nombreGrupo"
+        app:srcCompat="@drawable/note_12591551" />
+
+    <ImageView
+        android:id="@+id/imgCanciones"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgLetra"
+        app:srcCompat="@drawable/bullet_list_16351265"
+        tools:layout_editor_absoluteY="395dp" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imgSiguienteCancion,imgCancionAnterior,imgPlay" />
+
+    <TextView
+        android:id="@+id/tiempoAvanzado"
+        android:layout_width="58dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/imgSiguienteCancion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tiempoRestante"
+        app:layout_constraintTop_toBottomOf="@+id/barraProgresion"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/tiempoRestante"
+        android:layout_width="68dp"
+        android:layout_height="18dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/imgCancionAnterior"
+        app:layout_constraintEnd_toStartOf="@+id/tiempoAvanzado"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barraProgresion"
+        app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

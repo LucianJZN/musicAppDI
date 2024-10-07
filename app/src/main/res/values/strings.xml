@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">musicAppXML</string>
+    <string name="app_name">“MusicApp”</string>
     <string name="tituloCancion">tituloCancion</string>
     <string name="nombreGrupo">nombreGrupo</string>
 
